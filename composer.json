@@ -1,0 +1,69 @@
+{
+    "name": "statamic/statamic-super-mover",
+    "type": "statamic-addon",
+    "description": "Temporarily maintained fork of Codedge's Statamic Move Entries addon",
+    "keywords": [
+        "statamic",
+        "super",
+        "mover",
+        "move",
+        "entries",
+        "control",
+        "panel",
+        "control panel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Holger Lösken",
+            "email": "holger.loesken@codedge.de",
+            "homepage": "https://www.codedge.de"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.2",
+        "spatie/ray": "^1.30"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codedge\\MoveEntries\\ServiceProvider"
+            ]
+        },
+        "statamic": {
+            "description": "Move entries in the Control Panel",
+            "name": "Super Mover"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Codedge\\MoveEntries\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codedge\\MoveEntries\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --debug --testdox",
+        "test-clover-coverage": "./vendor/bin/phpunit --coverage-clover clover.xml",
+        "test-coverage": "./vendor/bin/phpunit --coverage-html coverage"
+    },
+    "support": {
+        "issues": "https://github.com/statamic/statamic-super-mover/issues",
+        "source": "https://github.com/statamic/statamic-super-mover"
+    }
+}
