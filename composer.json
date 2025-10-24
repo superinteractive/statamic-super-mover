@@ -1,5 +1,5 @@
 {
-    "name": "statamic/statamic-super-mover",
+    "name": "superinteractive/statamic-super-mover",
     "type": "statamic-addon",
     "description": "Temporarily maintained fork of Codedge's Statamic Move Entries addon",
     "keywords": [
